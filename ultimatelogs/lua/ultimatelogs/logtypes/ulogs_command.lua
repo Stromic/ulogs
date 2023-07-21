@@ -39,7 +39,7 @@ end)
 
 local OldConCommand = concommand.Run
 
-function concommand.Run( Player, Cmd, Args )
+function concommand.Run( Player, Cmd, Args, ArgsStr )
 	
 	if SERVER and Player and Player:IsValid() and Player:IsPlayer() then
 		
@@ -56,7 +56,7 @@ function concommand.Run( Player, Cmd, Args )
 		
 	end
 	
-	return OldConCommand( Player, Cmd, Args )
+	return OldConCommand( Player, Cmd, Args, ArgsStr )
 	
 end
 
